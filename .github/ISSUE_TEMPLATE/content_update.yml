@@ -1,0 +1,265 @@
+name: Content & Documentation Update
+description: Request updates to text content, documentation, or informational displays
+title: "[Content]: "
+labels: ["content", "documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request changes to text content, documentation, help text, or other informational content in the system.
+
+  - type: textarea
+    id: content-request-summary
+    attributes:
+      label: Content Update Summary
+      description: Briefly describe what content needs to be updated or added.
+      placeholder: Summarize the content change request in 1-2 sentences.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Type of Content
+      description: What kind of content needs to be updated?
+      options:
+        - Activity descriptions
+        - Help text or instructions
+        - Error messages
+        - Page titles or headers
+        - Footer information
+        - User interface labels
+        - Email templates/notifications
+        - System documentation
+        - User guide or tutorial content
+        - About/contact information
+        - Legal or policy text
+        - Other text content
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-location
+    attributes:
+      label: Content Location
+      description: Where in the system is this content located?
+      options:
+        - Main activities page
+        - Search/filter interface
+        - Registration forms
+        - Login page
+        - User profile/account area
+        - Email notifications
+        - Error pages
+        - Help/documentation section
+        - Footer
+        - Header/navigation
+        - Multiple locations
+        - Not sure (please describe in context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What does the current content say? (Copy and paste the exact text if possible)
+      placeholder: |
+        Provide the current text that needs to be changed:
+        
+        Example:
+        "Join our amazing activities today!"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-content
+    attributes:
+      label: Proposed New Content
+      description: What should the new content say? (Provide the exact text you want)
+      placeholder: |
+        Provide the exact new content:
+        
+        Example:
+        "Explore extracurricular activities at Mergington High School and register for programs that match your interests."
+    validations:
+      required: true
+
+  - type: textarea
+    id: content-purpose
+    attributes:
+      label: Purpose of Change
+      description: Why does this content need to be updated?
+      placeholder: |
+        Explain the reason for the change:
+        - Outdated information
+        - Confusing or unclear wording
+        - Missing important details
+        - Policy or procedure changes
+        - Improved user experience
+        - Accessibility improvements
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this content?
+      options:
+        - Students
+        - Teachers/Staff
+        - Parents/Guardians
+        - System Administrators
+        - All Users
+        - Specific user group (please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tone-style
+    attributes:
+      label: Desired Tone and Style
+      description: What tone should the content have?
+      options:
+        - Professional and formal
+        - Friendly and welcoming
+        - Clear and instructional
+        - Encouraging and motivational
+        - Simple and straightforward
+        - Match existing site tone
+        - Other (please specify in context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: content-requirements
+    attributes:
+      label: Content Requirements and Guidelines
+      description: Are there any specific requirements for this content?
+      placeholder: |
+        Consider:
+        - Character or word limits
+        - Required information to include
+        - Accessibility requirements
+        - Language/reading level
+        - Brand voice guidelines
+        - Legal or compliance requirements
+        - Translation needs
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: content-considerations
+    attributes:
+      label: Content Considerations
+      description: Check all that apply to this content update
+      options:
+        - label: Content should be accessible and easy to understand
+          required: false
+        - label: Content should be mobile-friendly
+          required: false
+        - label: Content should include clear calls-to-action
+          required: false
+        - label: Content should be consistent with other site messaging
+          required: false
+        - label: Content should be optimized for search/findability
+          required: false
+        - label: Content should include helpful examples or context
+          required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define what success looks like for this content update.
+      placeholder: |
+        List specific criteria for completion:
+        
+        Example:
+        - [ ] New content is displayed in the correct location
+        - [ ] Content is clear, accurate, and grammatically correct
+        - [ ] Content matches the desired tone and style
+        - [ ] Content displays properly on all devices
+        - [ ] Users can easily understand and act on the information
+    validations:
+      required: true
+
+  - type: dropdown
+    id: review-approval
+    attributes:
+      label: Review and Approval
+      description: Who should review and approve this content before it goes live?
+      options:
+        - No special approval needed
+        - Department head or supervisor
+        - Principal or administrator
+        - Communications team
+        - Legal/compliance review
+        - Multiple reviewers needed
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-updates
+    attributes:
+      label: Related Content Updates
+      description: Are there other places where similar content should be updated?
+      placeholder: |
+        Consider if this change affects:
+        - Related pages or sections
+        - Email templates
+        - User documentation
+        - Help text or tooltips
+        - Error messages
+        - Other communications
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: Any technical considerations for implementing this content change?
+      placeholder: |
+        Technical considerations:
+        - HTML formatting needed
+        - Dynamic content or variables
+        - Database updates required
+        - Template modifications
+        - Translation or localization
+        - SEO considerations
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency-timeline
+    attributes:
+      label: Timeline Requirements
+      description: When does this content need to be updated?
+      options:
+        - No rush - when convenient
+        - Within the next few weeks
+        - Within the next week
+        - Within the next few days
+        - Urgent - as soon as possible
+        - By specific date (please specify in context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would be helpful for this content update.
+      placeholder: |
+        Include:
+        - Background information
+        - User feedback received
+        - Examples from other sites
+        - Brand guidelines or style references
+        - Contact information for subject matter experts
+    validations:
+      required: false

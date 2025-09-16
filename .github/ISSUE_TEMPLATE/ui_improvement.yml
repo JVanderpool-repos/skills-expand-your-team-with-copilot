@@ -1,0 +1,220 @@
+name: UI/UX Improvement
+description: Suggest improvements to the user interface or user experience
+title: "[UI/UX]: "
+labels: ["ui/ux", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the user experience! Describe UI/UX issues or suggestions for making the system more user-friendly.
+
+  - type: textarea
+    id: ui-issue-summary
+    attributes:
+      label: UI/UX Issue Summary
+      description: Briefly describe the UI/UX issue or improvement opportunity.
+      placeholder: What specific aspect of the user interface or experience needs improvement?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ui-component
+    attributes:
+      label: Affected UI Component
+      description: Which part of the interface is affected?
+      options:
+        - Navigation/Header
+        - Activity Cards/List
+        - Search and Filters
+        - Registration Modal
+        - Login Form
+        - Footer
+        - General Layout
+        - Mobile View
+        - Color Scheme/Theme
+        - Typography/Fonts
+        - Icons and Graphics
+        - Form Elements
+        - Error Messages
+        - Loading States
+        - Other (please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of UI/UX Issue
+      description: What kind of improvement is this?
+      options:
+        - Confusing or unclear interface
+        - Poor visual hierarchy
+        - Difficult to find information
+        - Not mobile-friendly
+        - Accessibility issue
+        - Inconsistent design
+        - Poor color contrast
+        - Hard to read text
+        - Slow or unresponsive interactions
+        - Missing visual feedback
+        - Cluttered or overwhelming layout
+        - Other usability issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-experience
+    attributes:
+      label: Current User Experience
+      description: Describe the current user experience and what makes it problematic.
+      placeholder: |
+        Explain what users currently experience when interacting with this part of the system.
+        What specific difficulties or frustrations do they encounter?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: Describe your suggested improvement in detail.
+      placeholder: |
+        Provide a detailed description of how the UI/UX should be improved.
+        Include:
+        - Visual changes needed
+        - Interaction improvements
+        - Layout modifications
+        - Content organization changes
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-benefit
+    attributes:
+      label: User Benefit
+      description: How will this improvement benefit users?
+      placeholder: |
+        Explain how the proposed changes will improve the user experience.
+        Consider benefits for different user types (students, teachers, etc.).
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-users
+    attributes:
+      label: Primary Users Affected
+      description: Who would benefit most from this improvement?
+      options:
+        - Students
+        - Teachers
+        - Both Students and Teachers
+        - System Administrators
+        - All Users
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-context
+    attributes:
+      label: Device Context
+      description: On which devices is this issue most noticeable?
+      options:
+        - Desktop/Laptop
+        - Mobile Phone
+        - Tablet
+        - All Devices
+        - Not device-specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: visual-examples
+    attributes:
+      label: Visual Examples or References
+      description: Provide visual examples, mockups, or references to similar interfaces.
+      placeholder: |
+        You can:
+        - Attach screenshots showing the current issue
+        - Provide mockups of your proposed solution
+        - Reference similar interfaces from other websites/apps
+        - Drag and drop images here
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific criteria for when this improvement is complete.
+      placeholder: |
+        List measurable criteria that define success:
+        
+        Example:
+        - [ ] The search filters are visually organized in a clear hierarchy
+        - [ ] Users can easily distinguish between different filter categories
+        - [ ] The interface works consistently across desktop and mobile
+        - [ ] Color contrast meets WCAG accessibility standards
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: accessibility-considerations
+    attributes:
+      label: Accessibility Considerations
+      description: Check any accessibility aspects that should be considered
+      options:
+        - label: Color contrast and visibility
+          required: false
+        - label: Keyboard navigation
+          required: false
+        - label: Screen reader compatibility
+          required: false
+        - label: Text size and readability
+          required: false
+        - label: Focus indicators
+          required: false
+        - label: Alternative text for images
+          required: false
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Implementation Notes
+      description: Any technical considerations for implementing this improvement?
+      placeholder: |
+        Consider:
+        - CSS/styling changes needed
+        - JavaScript/interaction changes
+        - HTML structure modifications
+        - Responsive design requirements
+        - Browser compatibility concerns
+    validations:
+      required: false
+
+  - type: dropdown
+    id: effort-estimate
+    attributes:
+      label: Estimated Implementation Effort
+      description: How complex do you think this change would be to implement?
+      options:
+        - Small - Simple styling/content changes
+        - Medium - Some restructuring or new components
+        - Large - Significant redesign or complex interactions
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about this UI/UX improvement.
+      placeholder: |
+        Include:
+        - User feedback you've received
+        - Observed user behavior
+        - Related issues or improvements
+        - Timeline considerations
+    validations:
+      required: false

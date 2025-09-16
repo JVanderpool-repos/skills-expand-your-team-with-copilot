@@ -1,0 +1,134 @@
+name: Bug Report
+description: Report a bug or issue with the High School Management System
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out this form as completely as possible to help us understand and fix the issue.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe what happened and what you expected to happen instead.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-component
+    attributes:
+      label: Affected Component
+      description: Which part of the system is affected?
+      options:
+        - Student Activity Registration
+        - Activity Search/Filtering
+        - Teacher Authentication
+        - Activity Management
+        - User Interface
+        - Database/Data Storage
+        - API Endpoints
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide detailed steps to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should have happened instead?
+      placeholder: A clear description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: A clear description of what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages
+      description: If there are any error messages, please include them here.
+      placeholder: Paste any error messages or console output here.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser (if applicable)
+      description: Which browser are you using?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+        - Not applicable
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context about the problem here. Include:
+        - Screenshots or screen recordings if helpful
+        - Any workarounds you've found
+        - When the bug started occurring
+        - How often it happens
+      placeholder: Any additional information that might be helpful.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Check all that apply for a successful fix
+      options:
+        - label: The bug no longer occurs when following the reproduction steps
+          required: false
+        - label: The system behaves as described in "Expected Behavior"
+          required: false
+        - label: No new bugs are introduced by the fix
+          required: false
+        - label: The fix is tested and verified to work
+          required: false
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints (for developers)
+      description: |
+        Any technical insights or suggestions for developers working on this issue:
+        - Suspected root cause
+        - Relevant code files or functions
+        - Database queries that might be involved
+        - API endpoints affected
+      placeholder: Optional technical context for developers
+    validations:
+      required: false

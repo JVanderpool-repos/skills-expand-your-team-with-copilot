@@ -1,0 +1,170 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for the High School Management System
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature Summary
+      description: A brief, clear summary of the feature you'd like to see added.
+      placeholder: Summarize the feature in 1-2 sentences.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: What type of feature is this?
+      options:
+        - Student Experience Enhancement
+        - Teacher/Admin Tools
+        - Activity Management
+        - Search and Filtering
+        - User Interface Improvement
+        - Data Export/Import
+        - Notification System
+        - Reporting and Analytics
+        - Mobile Responsiveness
+        - Accessibility
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What pain point are you experiencing?
+      placeholder: |
+        Describe the current limitation or problem that this feature would address.
+        Example: "Currently, teachers cannot easily see which students have signed up for activities, making it difficult to plan and organize events."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this feature working.
+      placeholder: |
+        Provide a detailed description of how the feature should work.
+        Include:
+        - What the user would see/do
+        - How they would interact with it
+        - What the expected outcome would be
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories
+      description: Write user stories that describe how different users would benefit from this feature.
+      placeholder: |
+        Format: "As a [type of user], I want [goal] so that [benefit]"
+        
+        Examples:
+        - As a teacher, I want to see enrollment numbers for each activity so that I can plan accordingly.
+        - As a student, I want to receive email confirmations when I register for activities so that I know my registration was successful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define what "done" looks like for this feature.
+      placeholder: |
+        List specific, testable criteria that must be met for this feature to be considered complete.
+        
+        Example:
+        - [ ] Teachers can view a list of students enrolled in each activity
+        - [ ] The list can be filtered by activity type
+        - [ ] The list can be exported to CSV format
+        - [ ] The feature is accessible on both desktop and mobile devices
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level  
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would improve workflow
+        - High - Significant impact on daily tasks
+        - Critical - Blocking current work
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups-wireframes
+    attributes:
+      label: Mockups or Wireframes
+      description: If you have any visual ideas, describe them here or attach images.
+      placeholder: |
+        Describe any visual ideas or attach screenshots/mockups.
+        You can drag and drop images here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-requirements
+    attributes:
+      label: Technical Requirements
+      description: Any specific technical requirements or constraints?
+      placeholder: |
+        Consider:
+        - Database changes needed
+        - API endpoints to create/modify
+        - Security considerations
+        - Performance requirements
+        - Integration with existing features
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternative-solutions
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative approaches or workarounds?
+      placeholder: Describe any alternative solutions you've considered and why they might not be ideal.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: implementation-scope
+    attributes:
+      label: Implementation Scope
+      description: Check all components that might need changes
+      options:
+        - label: Frontend/User Interface changes
+          required: false
+        - label: Backend API changes
+          required: false
+        - label: Database schema changes
+          required: false
+        - label: Authentication/Authorization changes
+          required: false
+        - label: Documentation updates
+          required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would be helpful for implementing this feature.
+      placeholder: |
+        Add any other context, examples, or references that might be helpful.
+        Include links to similar features in other applications if relevant.
+    validations:
+      required: false
