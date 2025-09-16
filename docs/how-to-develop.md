@@ -18,8 +18,10 @@ This project is best developed using GitHub Codespaces, which provides a consist
 
 The project requires the following Python packages:
 
-- FastAPI - Modern web framework for building APIs
-- Uvicorn - ASGI server implementation for running the FastAPI application
+- **FastAPI** - Modern web framework for building APIs
+- **Uvicorn** - ASGI server implementation for running the FastAPI application
+- **PyMongo** - MongoDB driver for Python
+- **Argon2** - Secure password hashing library
 
 These dependencies will be installed when you run `pip install -r requirements.txt`
 
@@ -42,16 +44,17 @@ These dependencies will be installed when you run `pip install -r requirements.t
 1. Install the dependencies:
 
    ```bash
-   pip install fastapi uvicorn
+   pip install -r requirements.txt
    ```
 
 2. Run the application:
 
    ```bash
-   python app.py
+   uvicorn app:app --reload
    ```
 
 3. Open your browser and go to:
+   - Website: http://localhost:8000
    - API documentation: http://localhost:8000/docs
    - Alternative documentation: http://localhost:8000/redoc
 
@@ -59,10 +62,14 @@ These dependencies will be installed when you run `pip install -r requirements.t
 
 ### API Endpoints
 
-| Method | Endpoint                                                          | Description                                                         |
-| ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
-| GET    | `/activities`                                                     | Get all activities with their details and current participant count |
-| POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/activities` | Get all activities with optional filtering by day/time |
+| GET | `/activities/days` | Get available days with activities |
+| POST | `/activities/{name}/signup` | Register student for activity (auth required) |
+| POST | `/activities/{name}/unregister` | Remove student from activity (auth required) |
+| POST | `/auth/login` | Teacher/admin authentication |
+| GET | `/auth/check-session` | Validate session |
 
 > [!IMPORTANT]
-> All data is stored in memory, which means data will be reset when the server restarts.
+> Data is stored in MongoDB. If running without MongoDB, the app will attempt to connect to localhost:27017.
