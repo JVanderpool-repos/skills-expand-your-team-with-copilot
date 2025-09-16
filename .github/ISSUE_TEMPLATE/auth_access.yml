@@ -1,0 +1,247 @@
+name: Authentication & Access Issue
+description: Report issues with login, user accounts, or access permissions
+title: "[Auth]: "
+labels: ["authentication", "security"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues related to user authentication, login problems, access permissions, or account management.
+
+  - type: textarea
+    id: auth-issue-summary
+    attributes:
+      label: Authentication Issue Summary
+      description: Briefly describe the authentication or access issue you're experiencing.
+      placeholder: Summarize the login or access problem in 1-2 sentences.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: auth-issue-type
+    attributes:
+      label: Type of Authentication Issue
+      description: What kind of authentication problem is this?
+      options:
+        - Cannot log in with correct credentials
+        - Forgot password / need password reset
+        - Account locked or disabled
+        - New teacher account needed
+        - User permissions incorrect
+        - Login page not working
+        - Session timeout issues
+        - Authentication not required where it should be
+        - Unauthorized access to features
+        - User profile/account information issues
+        - Other login or access issue
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: User Type Affected
+      description: What type of user is experiencing this issue?
+      options:
+        - Teacher/Staff
+        - System Administrator
+        - Multiple User Types
+        - Not Sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-users
+    attributes:
+      label: Affected Users
+      description: Who specifically is affected by this issue?
+      placeholder: |
+        Provide details about affected users:
+        - Specific usernames (if appropriate to share)
+        - Number of users affected
+        - Department or role of affected users
+        - When they first reported the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide detailed steps to reproduce the authentication issue.
+      placeholder: |
+        1. Go to the login page
+        2. Enter username: [username]
+        3. Enter password: [don't include actual password]
+        4. Click login button
+        5. See error: [describe error]
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen during the authentication process?
+      placeholder: |
+        Describe what should happen:
+        - Successful login
+        - Access to specific features
+        - Correct user permissions
+        - Proper session management
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happens instead?
+      placeholder: |
+        Describe what actually occurs:
+        - Error messages displayed
+        - Login failures
+        - Incorrect permissions
+        - Unexpected redirects
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages
+      description: Include any specific error messages you see.
+      placeholder: |
+        Copy and paste exact error messages:
+        - Browser console errors
+        - On-screen error messages
+        - Network request failures
+        - Server response errors
+    validations:
+      required: false
+
+  - type: dropdown
+    id: when-started
+    attributes:
+      label: When Did This Issue Start?
+      description: When did you first notice this authentication problem?
+      options:
+        - Just started happening
+        - Within the last few days
+        - Within the last week
+        - Within the last month
+        - It's been ongoing for a while
+        - This is a new user account issue
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: account-requirements
+    attributes:
+      label: Account Requirements (for new accounts)
+      description: If requesting new user accounts, provide the required information.
+      placeholder: |
+        For new teacher/staff accounts, include:
+        - Full name
+        - Email address
+        - Department/Role
+        - Required permissions/access level
+        - Supervisor or contact person
+        - Start date (if applicable)
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: attempted-solutions
+    attributes:
+      label: Attempted Solutions
+      description: What have you already tried to resolve this issue?
+      options:
+        - label: Cleared browser cache and cookies
+          required: false
+        - label: Tried different browser
+          required: false
+        - label: Checked if username/password are correct
+          required: false
+        - label: Waited and tried again later
+          required: false
+        - label: Contacted IT support
+          required: false
+        - label: Tried on different device/computer
+          required: false
+        - label: None of the above
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define what success looks like for resolving this authentication issue.
+      placeholder: |
+        List specific criteria for resolution:
+        
+        Example:
+        - [ ] User can successfully log in with their credentials
+        - [ ] User has access to all appropriate features
+        - [ ] Login session persists appropriately
+        - [ ] No unauthorized access is possible
+        - [ ] Error messages are clear and helpful
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgent is this authentication issue?
+      options:
+        - Low - Can work around the issue
+        - Medium - Impacting daily work
+        - High - Blocking important tasks
+        - Critical - Cannot perform job duties
+    validations:
+      required: true
+
+  - type: textarea
+    id: security-considerations
+    attributes:
+      label: Security Considerations
+      description: Are there any security concerns related to this issue?
+      placeholder: |
+        Consider:
+        - Potential security vulnerabilities
+        - Data access concerns
+        - Compliance requirements
+        - Need for immediate action to prevent security issues
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Details (for developers)
+      description: Any technical information that might help developers diagnose the issue.
+      placeholder: |
+        Technical context:
+        - Authentication method used (sessions, tokens, etc.)
+        - Database user management tables
+        - API endpoints involved
+        - Configuration settings that might be relevant
+        - Log file locations or error tracking
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be relevant to this authentication issue.
+      placeholder: |
+        Include:
+        - Recent system changes
+        - Related issues
+        - User training needs
+        - Communication requirements
+    validations:
+      required: false

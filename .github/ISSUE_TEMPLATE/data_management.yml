@@ -1,0 +1,238 @@
+name: Data Management Request
+description: Request changes to data handling, storage, or management features
+title: "[Data]: "
+labels: ["data", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request help with data-related tasks like adding new activities, managing student information, data export/import, or database modifications.
+
+  - type: textarea
+    id: data-request-summary
+    attributes:
+      label: Data Request Summary
+      description: Briefly describe what data management task you need help with.
+      placeholder: Summarize the data-related request in 1-2 sentences.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-operation-type
+    attributes:
+      label: Type of Data Operation
+      description: What kind of data operation do you need?
+      options:
+        - Add new activities/programs
+        - Update existing activity information
+        - Remove or archive activities
+        - Bulk data import
+        - Data export/reporting
+        - Student enrollment management
+        - Teacher/staff data management
+        - Database cleanup/maintenance
+        - Data migration
+        - Backup and recovery
+        - Data validation/correction
+        - Other (please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-entity
+    attributes:
+      label: Primary Data Entity
+      description: What type of data are you working with?
+      options:
+        - Activities/Programs
+        - Student Information
+        - Teacher/Staff Information
+        - Enrollment Records
+        - User Accounts
+        - Categories/Classifications
+        - Schedules/Time Data
+        - Settings/Configuration
+        - Multiple Entities
+        - Other (please specify)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: Current Situation
+      description: Describe the current state of the data and what needs to be changed.
+      placeholder: |
+        Explain:
+        - What data currently exists (or doesn't exist)
+        - What problems you're encountering
+        - Why changes are needed
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Desired Outcome
+      description: Describe exactly what you want to achieve with this data operation.
+      placeholder: |
+        Be specific about:
+        - What the data should look like after the changes
+        - What functionality should be available
+        - How the data should behave in the system
+    validations:
+      required: true
+
+  - type: textarea
+    id: data-details
+    attributes:
+      label: Data Details and Specifications
+      description: Provide specific details about the data involved in this request.
+      placeholder: |
+        Include:
+        - Specific data values (activity names, descriptions, schedules, etc.)
+        - Data formats or structures
+        - Required fields and their values
+        - Data relationships or dependencies
+        
+        Example for adding activities:
+        - Activity Name: "Robotics Club"
+        - Category: "Technology" 
+        - Schedule: "Tuesdays and Thursdays, 3:30-5:00 PM"
+        - Description: "Learn programming and build robots"
+        - Capacity: 20 students
+        - Teacher: "Mr. Johnson"
+    validations:
+      required: true
+
+  - type: textarea
+    id: data-source
+    attributes:
+      label: Data Source
+      description: Where is the data coming from or where can it be found?
+      placeholder: |
+        Specify:
+        - File attachments (CSV, Excel, etc.)
+        - Manual entry requirements
+        - Existing system data
+        - External sources
+        - Previously submitted information
+    validations:
+      required: false
+
+  - type: textarea
+    id: validation-rules
+    attributes:
+      label: Data Validation Requirements
+      description: What validation rules or constraints should be applied to this data?
+      placeholder: |
+        Consider:
+        - Required fields
+        - Format requirements (dates, emails, etc.)
+        - Value ranges or limits
+        - Uniqueness constraints
+        - Business rules to enforce
+        
+        Example:
+        - Activity names must be unique
+        - Schedules cannot overlap for the same teacher
+        - Student email addresses must be valid
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency-level
+    attributes:
+      label: Urgency Level
+      description: How soon do you need this data change implemented?
+      options:
+        - Low - Can wait a few weeks
+        - Medium - Needed within a week
+        - High - Needed within a few days
+        - Critical - Needed immediately (blocking other work)
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific criteria for when this data management task is complete.
+      placeholder: |
+        List measurable criteria that define success:
+        
+        Example:
+        - [ ] New activities appear in the activities list
+        - [ ] Students can search and filter the new activities
+        - [ ] Teachers can see enrollment data for their activities
+        - [ ] Data validation prevents invalid entries
+        - [ ] All existing functionality continues to work
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact-areas
+    attributes:
+      label: System Areas Potentially Affected
+      description: Check all areas that might be impacted by this data change
+      options:
+        - label: Activity display and search
+          required: false
+        - label: Student registration process
+          required: false
+        - label: Teacher management interface
+          required: false
+        - label: Reporting and analytics
+          required: false
+        - label: User authentication
+          required: false
+        - label: Email notifications
+          required: false
+        - label: Database structure
+          required: false
+        - label: API endpoints
+          required: false
+
+  - type: textarea
+    id: backup-rollback
+    attributes:
+      label: Backup and Rollback Considerations
+      description: Are there any special backup or rollback requirements for this data operation?
+      placeholder: |
+        Consider:
+        - Need for data backup before changes
+        - Rollback plan if something goes wrong
+        - Data archival requirements
+        - Testing requirements before production
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-implementation
+    attributes:
+      label: Technical Implementation Hints
+      description: Any technical guidance for developers implementing this change?
+      placeholder: |
+        Include:
+        - Database tables/collections affected
+        - API endpoints that need modification
+        - Data migration scripts needed
+        - Testing considerations
+        - Performance implications
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about this data management request.
+      placeholder: |
+        Include:
+        - Related requests or dependencies
+        - Historical context
+        - User impact considerations
+        - Compliance or policy requirements
+    validations:
+      required: false

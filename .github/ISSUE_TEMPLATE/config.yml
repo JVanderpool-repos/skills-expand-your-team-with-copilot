@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💡 General Question or Discussion
+    url: https://github.com/JVanderpool-repos/skills-expand-your-team-with-copilot/discussions
+    about: Ask questions or start discussions about the High School Management System
+  - name: 📖 Documentation
+    url: https://github.com/JVanderpool-repos/skills-expand-your-team-with-copilot/blob/main/README.md
+    about: Check the README and documentation for help getting started
+  - name: 🚀 GitHub Copilot Documentation
+    url: https://docs.github.com/en/copilot
+    about: Learn more about GitHub Copilot and how to use it effectively
